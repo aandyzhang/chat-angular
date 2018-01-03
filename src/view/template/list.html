@@ -1,0 +1,32 @@
+<div class="list">
+    <div class="item">
+        <div class="text" ng-if="option.msgType == 'text'">
+            <img class="head" ng-src="{{option.content.userInfo.head}}" alt="" height="50" width="50" ng-class="{'fl':option.fromFans,'fr':!option.fromFans}">
+            <div class="content" ng-bind="option.content.weiChat.message" ng-class="{'fl':option.fromFans,'fr':!option.fromFans}"></div>
+        </div>
+        <div class="_voice" ng-if="option.msgType == 'voice'">
+            <img class="head" ng-src="{{option.content.userInfo.head}}" alt="" height="50" width="50" ng-class="{'fl':option.fromFans,'fr':!option.fromFans}">
+            <div class="_mp3" mp3 options="option.content.weiChat.message" ng-class="{'fl':option.fromFans,'fr':!option.fromFans}"></div>
+        </div>
+        <div class="_video" ng-if="option.msgType == 'video'">
+            <img class="head" ng-src="{{option.content.userInfo.head}}" alt="" height="50" width="50" ng-class="{'fl':option.fromFans,'fr':!option.fromFans}">
+            <div class="_mp4" mp4 options="option.content.weiChat.message" ng-class="{'fl':option.fromFans,'fr':!option.fromFans}"></div>
+        </div>
+        <div class="_img" ng-if="option.msgType == 'image'">
+            <img class="head" src="image/goods.png" alt="" height="50" width="50" ng-class="{'fl':option.fromFans,'fr':!option.fromFans}">
+            <div class="_image" ng-class="{'fl':option.fromFans,'fr':!option.fromFans}">
+                <!-- 单击放大图片 -->
+                <img ng-click="setBig()" title="单击放大图片" ng-src="{{option.content.weiChat.message.url}}" src="" onerror="this.src='image/goods.png'" alt="" height="100" width="100">
+            </div>
+            <!-- 点击图片预览 -->
+            <div class="image-show" ng-if="imageStatus">
+                <img ng-src="{{option.content.weiChat.message.url}}" alt="" class="bigImage">
+                <div class="close" ng-click="close()">X</div>
+            </div>
+        </div>
+        <div class="_file" ng-if="option.msgType == 'file'">
+            <img class="head" src="image/goods.png" alt="" height="50" width="50" ng-class="{'fl':option.fromFans,'fr':!option.fromFans}">
+            <div class="file-info" file options="option.content.weiChat.message" ng-class="{'fl':option.fromFans,'fr':!option.fromFans}"></div>
+        </div>
+    </div>
+</div>

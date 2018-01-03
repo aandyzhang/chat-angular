@@ -1,0 +1,133 @@
+@import "direStyle/mp3.less";
+@import "direStyle/mp4.less";
+@import "direStyle/loading.less";
+@import "direStyle/list.less";
+@import "direStyle/file.less";
+*{
+	margin:0;
+	left:0;
+}
+body{
+	overflow: hidden;
+}
+.fl{
+	float:left;
+}
+.fr{
+	float:right;
+}
+.playBg{
+    background-color: #1ca3f9;
+    background: url('../image/show.gif') no-repeat;
+	background-position: 9px 0px;
+    background-size:20px 20px;
+}
+.pauseBg{
+	background-color: #1ca3f9;
+    background: url('../image/show.png') no-repeat;
+	background-position: 9px 0px;
+    background-size:20px 20px;
+}
+.top{
+	height: 40px;
+	background: #1ca3f9;
+}
+.chat-list {
+	width: 25%;
+	border:1px solid #EBF0F6;
+}
+
+.chat-wrap{
+	width: 50%;
+	border:1px solid #EBF0F6;
+}
+.chat-wrap {
+	position: relative;
+	.chat-content{
+		height: 320px;
+		overflow:auto;
+		border-bottom: 1px solid #EBF0F6;
+		.chat-content-left{
+			width:100%;
+			.info-wrap{
+				margin-top: 20px;
+				
+			}
+		}
+		.chat-content-right{
+			width: 100%;
+			.info-wrap{
+				margin-top: 20px;
+				img{
+					border-radius: 50%;
+					float: right;
+					margin-right: 15px;
+					margin-top: 8px;
+				}
+				.chat-info{
+					max-width: 30%;
+					margin-top: 10px;
+					color: #fff;
+					background: #1BA3F8;
+					margin-right: 10px;
+					text-align: justify;
+					padding:10px 10px;
+					line-height: 24px;
+					border-radius: 10px;
+					margin-bottom:20px;
+				}
+			}
+		}
+	}
+	.chat-input{
+		height:150px;
+		form{
+			height: 120px;
+			.error{
+				color: red;
+			}
+			.info{
+				width: 99%;
+				height: 60%;
+				resize: none;
+				outline: none;
+				border:none;
+				border-bottom:1px solid #EBF0F6;
+				border-top:1px solid #EBF0F6;
+				font-size: 16px;
+				font-family: "微软雅黑";
+			}
+			.btn-wrap{
+				// margin-bottom: 10px;
+				// overflow: hidden;
+				.btn{
+					display: inline-block;
+					width: 70px;
+					height: 30px;
+					text-align: center;
+					line-height: 30px;
+					font-size: 14px;
+					outline: none;
+					border:none;
+					border-radius: 10px;
+					float:right;
+					margin-top: 10px;
+					cursor: pointer;
+					margin-left: 10px;
+				}
+				.close{
+					background: #E2E8EA;
+					color:#A1A4A4;
+				}
+				.push{
+					background: #1CA3F9;
+					color: #fff;
+				}
+			}
+		}
+		}
+}
+.chat-right{
+	width: 23%;
+	border:1px solid red;
+}

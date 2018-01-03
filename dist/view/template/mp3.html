@@ -1,0 +1,6 @@
+<div class="voice" ng-click="play()" ng-class="{'playBg' : !status,'pauseBg' : status}">
+	<audio  class="mp3">
+		<source ng-src="{{getUrl(options.otherurl)}}"></source>
+	</audio>
+	<span class="time">{{options.time}}s</span>
+</div>	

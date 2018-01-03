@@ -1,0 +1,10 @@
+<div class="video" ng-click="play()">
+	<video  width="150">
+		<source ng-src="{{getUrl(options.url)}}"></source>
+	</video>
+	<div class="shade" ng-if="status">
+		<div class="pause">
+			<div class="pause-flag"></div>
+		</div>
+	</div>
+</div>	
